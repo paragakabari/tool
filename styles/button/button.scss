@@ -1,0 +1,43 @@
+.button {
+    button {
+        padding: 10px 24px;
+        background-color: #1566cc;
+        color: $primary-button-text-color;
+        @include font-14-medium;
+        border-radius: 9999px;
+        border: none;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        @include pointer;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.center-button-cancel {
+    display: flex;
+    justify-content: center;
+}
+
+.alignset {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    flex-direction: column;
+    padding: 25px 0;
+}
+.alignsettwo {
+    justify-content: center;
+}
+.h100 {
+    height: 100%;
+}
+
+.common-button-rounded-center-alignment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 0 0 0;
+}

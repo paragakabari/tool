@@ -1,0 +1,60 @@
+@import '../../../styles/mixins/global.scss';
+
+.similarPdFBoxContentAlignment {
+    padding: 40px 0 0 0;
+
+    .title {
+        padding: 0 0 20px 0;
+
+        p {
+            @include heading-18;
+            color: $black-2;
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        @include breakpoint("max-md") {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint("max-sm") {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .gridItems {
+            @include card;
+            padding: 10px;
+            @include pointer;
+
+            .subGrid {
+                display: grid;
+                grid-template-columns: 48px 1fr;
+                gap: 16px;
+                align-items: center;
+
+                .subGridItems {
+                    .iconBox {
+                        width: 48px;
+                        height: 48px;
+                        @include flex-center;
+                        border-radius: 8px;
+                        color: $icon-text-color;
+                        justify-content: center;
+                        @include pointer;
+                        @include purple-background-color;
+                    }
+
+                    span {
+                        @include heading-18;
+                        color: $black-2;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

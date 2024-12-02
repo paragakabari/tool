@@ -1,0 +1,246 @@
+@import '../../../styles/mixins/global.scss';
+
+
+
+.sidebar {
+
+    width: 100%;
+    position: sticky;
+    top: 82px;
+    overflow: auto;
+    background-color: #fff;
+    height: calc(100vh - 82px);
+
+
+    @include breakpoint("max-md") {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999999;
+        height: 100vh;
+        overflow: auto;
+    }
+
+    .subMenuHidden {
+        max-height: 0px;
+        overflow: hidden;
+        transition: .3s ease-in-out;
+    }
+
+    .subMenuShow {
+        // max-height: calc(100vh - 0px);
+        // overflow: hidden;
+        transition: .3s ease-in-out;
+    }
+
+    .sidebarTitle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: rgb(241, 242, 251);
+        padding: 16px 24px 12px;
+
+        p {
+            @include font-16-medium;
+            margin: 0px;
+            letter-spacing: 2px;
+            font-size: 12px;
+            color: rgb(143, 143, 166);
+        }
+
+        i {
+            color: rgb(143, 143, 166);
+
+            display: none;
+
+            @include breakpoint("max-md") {
+                display: block;
+            }
+        }
+    }
+
+    .sidebarMenu {
+
+        .childrenMenuShowAllContent {
+            margin-left: 38px;
+
+            .typeOfMenuAlignment {
+
+                span:first-child {
+                    padding-top: 20px;
+                }
+
+                span {
+                    display: block;
+                    @include heading-12;
+                    @include pointer;
+                    color: $black-2;
+                    opacity: .6;
+                    padding: 0 0 14px 0;
+                    transition: .3s ease-in-out;
+
+                    &:hover {
+                        color: $link-text-color;
+                        transition: .3s ease-in-out;
+                    }
+                }
+            }
+
+            .childrenMenuMain {
+                padding: 16px 0;
+                border-bottom: 1px solid #d0d0d045;
+
+                .textIconAlignment {
+                    @include flex-center;
+                    @include pointer;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    div {
+                        i {
+                            font-size: 12px;
+                            color: $black-2;
+                            opacity: .5;
+                        }
+                    }
+                }
+            }
+        }
+
+        .mainMenu {
+            padding: 16px 24px;
+            border-bottom: 1px solid #d0d0d045;
+
+            .subMenu {
+                margin-left: 38px;
+
+                span:first-child {
+                    padding-top: 20px;
+                }
+
+                span {
+                    display: block;
+                    @include heading-12;
+                    @include pointer;
+                    color: #26274b;
+                    padding: 0 0 14px 0;
+                    line-height: 27px;
+                    transition: .3s ease-in-out;
+
+                    &:hover {
+                        color: $link-text-color;
+                        transition: .3s ease-in-out;
+                    }
+                }
+            }
+
+
+
+            .sidebarFlex {
+                @include flex-center;
+                justify-content: space-between;
+                @include pointer;
+
+                .rightAlignment {
+                    font-size: 12px;
+                    @include pointer;
+
+                    i {
+                        color: $black-2;
+
+                    }
+                }
+
+                .leftAlignment {
+                    @include flex-center;
+
+                    div+div {
+                        padding-left: 16px;
+                    }
+
+                    div:first-child {
+                        width: 22px;
+                    }
+
+                    div {
+                        @include flex-center;
+
+                        span {
+                            @include heading-18;
+                            font-size: 16px;
+                            color: #000;
+                        }
+
+                        i {
+                            color: #000;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .childrenMenuMain {
+        padding: 0;
+        border-bottom: 1px solid #d0d0d045;
+
+        .textIconAlignment {
+            @include flex-center;
+            @include pointer;
+            justify-content: space-between;
+            width: 100%;
+
+            div {
+                i {
+                    font-size: 12px;
+                    color: $black-2;
+                    opacity: .5;
+                }
+            }
+        }
+    }
+}
+
+.mobileSidebarFilter {
+    padding: 40px 20px 0 20px;
+    display: none;
+
+    @include breakpoint("max-md") {
+        display: block;
+    }
+
+    .button {
+        button {
+            padding: 10px 24px;
+            background-color: $primary-button-background-color;
+            color: $primary-button-text-color;
+            @include font-14-medium;
+            border-radius: 9999px;
+            border: none;
+            font-weight: 600;
+            width: 100%;
+            letter-spacing: .5px;
+            @include pointer;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+}
+
+@include breakpoint("max-md") {
+
+    .sidebarHiddenStyle {
+        transform: translateX(100%);
+        transition: .3s ease-in-out;
+    }
+
+    .sidebarHiddenShow {
+        transform: translateX(0%);
+        transition: .3s ease-in-out;
+    }
+}

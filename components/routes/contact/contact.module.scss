@@ -1,0 +1,47 @@
+@import '../../../styles/mixins/global.scss';
+
+.contactAllSectionContentAlignment {
+    padding: 80px 0;
+    min-height: calc(100vh - 198px);
+
+    .imageCenteralignment {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 80px 0 0 0;
+
+        img {
+            max-width: 120px;
+        }
+    }
+
+    .textRepeatText {
+        padding: 0 0 30px 0;
+
+
+        h2 {
+            @include heading-24;
+            margin: 0 0 20px 0;
+            color: #000;
+        }
+
+        p {
+            @include heading-12;
+            color: #050505;
+            font-size: 18px;
+            line-height: 28px;
+            margin: 0 0 20px 0;
+            font-weight: 400;
+        }
+
+        a {
+            display: block;
+            @include heading-12;
+            color: #050505;
+            font-size: 18px;
+            line-height: 28px;
+            padding: 0 0 20px 0;
+            font-weight: 400;
+        }
+    }
+}

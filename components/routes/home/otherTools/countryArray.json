@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Austria",
+        "code": "at_AT"
+    },
+    {
+        "name": "Belgium",
+        "code": "be_BE"
+    },
+    {
+        "name": "Croatia",
+        "code": "hr_HR"
+    },
+    {
+        "name": "Czech Republic",
+        "code": "cz_CZ"
+    },
+    {
+        "name": "Denmark",
+        "code": "da_DK"
+    },
+    {
+        "name": "Finland",
+        "code": "fi_FI"
+    },
+    {
+        "name": "France",
+        "code": "fr_FR"
+    }
+]

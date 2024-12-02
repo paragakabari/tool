@@ -1,0 +1,26 @@
+@import '../../../styles/mixins/global.scss';
+
+.firstAddBoxSection {
+
+    display: flex;
+    justify-content: center;
+
+    .firstAddBoxAlignment {
+        position: fixed;
+        bottom: 0;
+        z-index: 9;
+        @include breakpoint("max-sm") {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+        img {
+            width: 720px;
+            height: 90px;
+            display: block;
+
+        }
+    }
+}

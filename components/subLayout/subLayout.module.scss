@@ -1,0 +1,15 @@
+@import '../../styles/mixins/global.scss';
+
+.sublayoutGrid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 0;
+
+    @media only screen and (max-width : "1199px")  {
+        grid-template-columns: 300px 1fr;
+    }
+
+    @include breakpoint("max-md") {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://convertor-frontends.buildx.live
+
+# Sitemaps
+Sitemap: https://convertor-frontends.buildx.live/sitemap.xml

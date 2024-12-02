@@ -1,0 +1,94 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .form__btns .btn + .btn {
+    margin-left: 12px;
+    margin-top: 15px;
+    border-radius: 10px;
+  }
+  
+  .form__btns {
+    justify-content: center;
+    border-radius: 10px;
+  }
+  
+  .form__btns .btn {
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 15px 45px;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    transition: background 0.25s ease-in-out;
+  }
+  
+  .btn {
+    width: 80%;
+    padding: 25px 15px;
+  }
+  
+ 
+  .btn-primary {
+    background: #0984e3;
+  }
+  
+  .btn-primary:hover {
+    background: #0767b2;
+  }
+  
+  .btn-info {
+    background: #48cfe4;
+  }
+  
+  .btn-info:hover {
+    background: #0a98ad;
+  }
+  
+  .btn-danger {
+    background: #d63031;
+  }
+  
+  .btn-success {
+    background: #42d164;
+  }
+  
+  .btn-success:hover {
+    background: #10882c;
+  }
+  
+  .btn-danger:hover {
+    background: #b02324;
+  }
+  
+  .numberAlignment {
+
+    position: relative;
+    padding: 5px;
+    padding-right: 25px;
+    border-radius: 10px;
+  }
+
+  .numberAlignment {
+    position: relative;
+    padding: 5px;
+    padding-right: 25px;
+    border-radius: 10px;
+  }
+  
+  .numberAlignment::-webkit-inner-spin-button,
+  .numberAlignment::-webkit-outer-spin-button {
+    opacity: 1;
+  }
+  
+  .numberAlignment::-webkit-outer-spin-button,
+  .numberAlignment::-webkit-inner-spin-button {
+    -webkit-appearance: inner-spin-button !important;
+    width: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+  

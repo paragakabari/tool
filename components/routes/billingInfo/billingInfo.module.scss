@@ -1,0 +1,375 @@
+@import "../../../styles/mixins/global.scss";
+
+.billinginforAllcontentAlignment {
+  padding: 60px 0;
+  min-height: calc(100vh - 198px);
+  .billingInfoTab {
+    background-color: #ffffff;
+    border-radius: 99px;
+    padding: 12px 24px;
+    box-shadow: 3px 10px 40px rgb(24 29 32 / 5%);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    // button.active {
+    //   background-color: #1566cc;
+    //   color: #fff;
+    //   transition: 0.3s ease-in-out;
+    // }
+
+    button {
+      display: flex;
+      align-items: center;
+      border-radius: 99px;
+      padding: 12px 22px;
+      background-color: transparent;
+      border: 1px solid #d0d0d0;
+      font-family: $primary-font-family;
+      cursor: pointer;
+      white-space: nowrap;
+      color: #525658;
+      font-weight: 500;
+      font-size: 14px;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #1566cc;
+        color: #fff;
+        transition: 0.3s ease-in-out;
+      }
+
+      &.active {
+        background-color: #1566cc;
+        color: #fff;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+  .billingDataTableAlignment {
+    .noRecords {
+      text-align: center;
+      padding: 20px;
+      font-size: 15px;
+    }
+    padding: 60px 0 22px 0;
+    :glboal(.button) {
+      display: flex;
+      padding: 20px 0 0 0;
+      align-items: center;
+      justify-content: center;
+      button {
+        background-color: #dc3545 !important;
+      }
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+
+      .linkTextColor {
+        color: #1566cc !important;
+      }
+      .downloadIcon {
+        width: 20px;
+        height: 20px;
+        fill: #005c9f;
+      }
+      td {
+        border: 1px solid #e3e3e4;
+        padding: 15px;
+        font-size: 14px;
+        color: #000;
+      }
+      thead {
+        tr {
+          border: 1px solid #e3e3e4;
+          th {
+            border: 1px solid #e3e3e4;
+            padding: 15px;
+            background-color: #efefef;
+            color: #707375;
+            font-weight: 500;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .billinginfoAlltext {
+    padding: 60px 0 0 22px;
+
+    h1 {
+      @include heading-24;
+      margin: 0 0 30px 0;
+      color: #000;
+      font-family: $primary-font-family;
+    }
+    .ordersummary {
+      background-color: #fff;
+      box-shadow: 3px 10px 40px rgb(24 29 32 / 5%);
+      border-radius: 12px;
+      color: #181d20;
+      padding: 20px;
+      margin-top: 30px;
+
+      h6 {
+        font-size: 18px;
+        line-height: 26px;
+        font-family: $primary-font-family;
+        font-weight: 500;
+        margin: 0 0 20px 0;
+      }
+
+      :global(.button) {
+        display: flex;
+        justify-content: center;
+      }
+
+      .twoTextAlignment {
+        .textstyl {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 0 20px 0;
+          p {
+            font-size: 14px;
+            line-height: 20px;
+            color: #777;
+          }
+          p:last-child {
+            color: #000;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .creditCard {
+      background-color: #fff;
+      box-shadow: 3px 10px 40px rgb(24 29 32 / 5%);
+      border-radius: 12px;
+      color: #181d20;
+      padding: 20px;
+      margin-top: 30px;
+
+      :global(.button) {
+        display: flex;
+        justify-content: center;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 26px;
+        font-family: $primary-font-family;
+        font-weight: 500;
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+}
+
+.modalWrapper {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  //   backdrop-filter: blur(2px);
+  background: rgba(0, 0, 0, 0.4);
+
+  .modalContent {
+    width: 500px;
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    .modalHeader {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+      align-items: center;
+      span {
+        color: #000;
+      }
+      .imageDiv {
+        cursor: pointer;
+        i {
+          font-size: 24px;
+          color: $link-text-color;
+          @include pointer;
+        }
+      }
+    }
+    .modalHeaderInvoice {
+      display: flex;
+      justify-content: flex-end;
+      padding: 5px;
+      align-items: center;
+      span {
+        color: #000;
+      }
+      .imageDiv {
+        cursor: pointer;
+        i {
+          font-size: 24px;
+          color: $link-text-color;
+          @include pointer;
+        }
+      }
+    }
+    .modalSection {
+      margin: 20px 0 20px 0;
+      padding: 0 0 10px 0;
+      .cardInputs {
+        margin-top: 10px;
+        label {
+          margin: 5px 0 5px 0;
+          font-size: 14px;
+        }
+        .cardNumber {
+          border: 1px solid #d3d3d3;
+          height: 40px;
+          border-radius: 4px;
+          width: 100%;
+          input {
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            height: 100%;
+            width: 90%;
+            padding: 5px 5px 5px 15px;
+            letter-spacing: 1px;
+          }
+        }
+      }
+      .cardDetails {
+        margin-top: 15px;
+        column-gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        .detailsItem {
+          label {
+            margin: 5px 0 5px 0;
+            font-size: 14px;
+          }
+          input {
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            border: 1px solid #d3d3d3;
+            height: 40px;
+            width: 100%;
+            padding: 5px 5px 5px 15px;
+          }
+        }
+      }
+      .messageError {
+        margin-top: 10px;
+        font-size: 13px;
+        text-align: center;
+        color: rgb(255, 111, 111);
+      }
+      .messageSuccess {
+        margin-top: 10px;
+        font-size: 13px;
+        text-align: center;
+        color: rgb(62, 255, 114);
+      }
+      .invoiceSection {
+        height: 600px;
+        font-size: 14px;
+        // border: 2px dashed #d3d3d3;
+        border-radius: 10px;
+        // padding: 10px;
+        .invoiceItem {
+          display: flex;
+          margin: 10px;
+          .invoiceLabel {
+            width: 30%;
+            color: #1666cc;
+            font-weight: bold;
+          }
+          .invoiceText {
+            margin-left: 10px;
+          }
+          button {
+          }
+        }
+
+        .invoiceTitle {
+          margin: 10px;
+          font-weight: bold;
+          color: #003882;
+          font-size: 20px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          padding: 0 0 5px 0;
+          p {
+            font-size: 40px;
+            padding: 0 0 15px 0;
+            text-align: center;
+            font-weight: bold;
+          }
+          img {
+            width: 300px;
+            margin-bottom: 30px;
+          }
+        }
+        .blueSection {
+          height: 20px;
+          border-radius: 15px;
+          background-color: #1666cc !important;
+        }
+      }
+      .downloadFooter {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        button {
+          width: 50%;
+          border: none;
+          outline: none;
+          height: 40px;
+          background-color: #1666cc;
+          border-radius: 7px;
+          color: #fff;
+          font-weight: bold;
+          cursor: pointer;
+          &:hover {
+            background-color: rgb(0 92 159);
+          }
+        }
+      }
+    }
+
+    .modalFooter {
+      @include flex-center;
+
+      button {
+        padding: 17px 24px;
+        background-color: $primary-button-background-color;
+        color: $primary-button-text-color;
+        @include font-14-medium;
+        border-radius: 7px;
+        border: none;
+        font-weight: 600;
+        @include pointer;
+        width: 100%;
+
+        &:hover {
+          background-color: #005c9f;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}

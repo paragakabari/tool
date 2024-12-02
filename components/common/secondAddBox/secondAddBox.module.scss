@@ -1,0 +1,16 @@
+@import '../../../styles/mixins/global.scss';
+
+.secondAddBoxAlignment {
+    @include flex-center;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+
+    @include breakpoint("max-sm") {
+        flex-wrap: wrap;
+    }
+    img {
+        width: 300px;
+        height: 250px;
+    }
+}

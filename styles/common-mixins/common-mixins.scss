@@ -1,0 +1,37 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin pointer {
+    cursor: pointer;
+}
+
+@mixin text-center {
+    text-align: center;
+}
+
+@mixin block {
+    display: block;
+}
+
+@mixin grid {
+    display: grid;
+}
+
+@mixin card {
+    box-shadow: rgb(71 75 255 / 8%) 0px 2px 3px;
+    background: rgb(255, 255, 255);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+    &:hover {
+        transform: translate(0, -3px);
+        transition: .3s ease-in-out;
+    }
+}
+
+@mixin purple-background-color {
+    background: #E9E6F9;
+}

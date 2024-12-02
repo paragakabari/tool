@@ -1,0 +1,205 @@
+@import '../../../styles/mixins/global.scss';
+
+.contactFormAllSectionContentAlignment {
+    padding: 80px 0;
+    min-height: calc(100vh - 198px);
+
+    .contactFromAlignment {
+        padding: 65px;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 16px rgba(0, 0, 0, 0.25);
+        border-radius: 27px;
+        position: relative;
+        @include breakpoint("max-sm") {
+            padding: 24px;
+        }
+
+        .formGridAlignment {
+            display: grid;
+            grid-template-columns: 1fr 524px;
+            gap: 34px;
+            align-items: center;
+
+            @include breakpoint("max-md") {
+                grid-template-columns: 1fr;
+            }
+
+            .formDetailsAlignment {
+
+                .formDetailsHeadingAlignment {
+                    padding: 0 0 40px 0;
+
+                    h4 {
+                        @include font-20-semibold;
+                        color: $black-2;
+                        padding: 0 0 10px 0;
+                    }
+
+                    span {
+                        @include font-14-medium;
+                    }
+                }
+
+                .inputAlignment {
+                    padding: 0 0 20px 0;
+
+                    label {
+                        position: relative;
+                        display: inline-block;
+                        width: 100%;
+                        height: 40px;
+                    }
+
+                    span {
+                        padding: 10px;
+                        pointer-events: none;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        transition: 0.2s;
+                        transition-timing-function: ease;
+                        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+                        opacity: 0.5;
+                    }
+
+                    input {
+                        width: 100%;
+                        height: 40px;
+                        border: 1px solid #d0d0d0;
+                        padding: 0 16px;
+                        @include font-16-medium;
+                        border-radius: 4px;
+                        overflow: auto;
+                        background-color: #FFFFFF;
+                        outline: none;
+
+                        &::placeholder {
+                            font-family: $secondary-font-family !important;
+                        }
+                    }
+
+                    input:focus+span,
+                    input:not(:placeholder-shown)+span {
+                        opacity: 1;
+                        transform: scale(0.75) translateY(-65%) translateX(-30px);
+                        background-color: #FFFFFF;
+                        margin: 0 20px;
+                        white-space: nowrap;
+                        padding: 0 5px;
+                    }
+
+                    /* For IE Browsers*/
+                    input:focus+span,
+                    input:not(:-ms-input-placeholder)+span {
+                        opacity: 1;
+                        transform: scale(0.75) translateY(-100%) translateX(-30px);
+                        margin: 0 20px;
+                        white-space: nowrap;
+                        padding: 0 5px;
+
+                    }
+
+                    textarea {
+                        width: 100%;
+                        height: 140px;
+                        border: 1px solid #d0d0d0;
+                        padding: 16px;
+                        @include font-16-medium;
+                        border-radius: 4px;
+                        overflow: auto;
+                        background-color: #FFFFFF;
+                        outline: none;
+
+                        &::placeholder {
+                            font-family: $secondary-font-family !important;
+                        }
+                    }
+
+                    textarea:focus+span,
+                    textarea:not(:placeholder-shown)+span {
+                        opacity: 1;
+                        transform: scale(0.75) translateY(-65%) translateX(-30px);
+                        background-color: #FFFFFF;
+                        margin: 0 20px;
+                        white-space: nowrap;
+                        padding: 0 5px;
+                    }
+
+                    /* For IE Browsers*/
+                    textarea:focus+span,
+                    textarea:not(:-ms-input-placeholder)+span {
+                        opacity: 1;
+                        transform: scale(0.75) translateY(-100%) translateX(-30px);
+                        margin: 0 20px;
+                        white-space: nowrap;
+                        padding: 0 5px;
+
+                    }
+
+                }
+
+                .buttonAlignment {
+                    button {
+                        border: none;
+                        border-radius: 4px;
+                        background-color: $primary-button-background-color;
+                        box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+                        @include pointer;
+                        color: $primary-button-text-color;
+                        padding: 20px;
+                        @include font-14-medium;
+                        padding: 10px 54px;
+                        text-transform: uppercase;
+
+                    }
+                }
+            }
+
+            .secondDetailsAlignment {
+                img {
+                    width: 100%;
+                    height: auto;
+                    margin: 0 0 30px 0;
+                }
+
+                .formFridItemAlignment {
+                    @include flex-center;
+                    gap: 8px;
+                    justify-content: flex-end;
+
+                    .iconBoxALignment {
+                        @include flex-center;
+                        justify-content: center;
+                        width: 30px;
+                        height: 30px;
+                        background: #002f6b;
+                        border-radius: 50%;
+                        @include pointer;
+
+                        i {
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .rightAngleFirstImg {
+            position: absolute;
+            top: -80px;
+            left: -55px;
+            z-index: 0;
+            img {
+                width: 200px;
+            }
+        }
+
+        .rightAngleSecondImg {
+            img {
+                width: 46px;
+                
+            }
+        }
+    }
+}

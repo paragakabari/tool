@@ -1,0 +1,17 @@
+{
+    "name": "AiGallery Tools",
+    "description": "AiGallery Tools Extension",
+    "version": "1.0",
+    "manifest_version": 2,
+    "browser_action": {
+      "default_popup": "./index.html",
+      "default_title": "Next.js app"
+    },
+    "icons": {
+      "16": "card-image.png",
+      "48": "card-image.png",
+      "128": "card-image.png"
+    },
+   
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+  }
